@@ -2,9 +2,19 @@
 
 ## Commit Proposal
 
-Matriculation Number: <to be filled by student>
+Matriculation Number: 15-649-700
 
 Project idea short description: 
+
+### Einwärmhilfe für neue Trainingsleiter
+
+Als ich als Trianingsleiter begann kids zu leiten, fehlte es mir oft an genügend Erfahrung, welche Übungen vorbereitend für welche Techniken sein könnten. 
+
+Grundsätzlich sollte man Techniken erfassen und diese mit "Tags" versehen können.
+Zudem Aufwärm-Übungen erfassen, diese ebenfalls mit Tags versehen.
+Eventuell kann man die Tags etwas spezifischer machen wie z.B. "Hauptbeanspruchung" : { Beine, Arme, Rumpf }.
+
+Danach sollte man sein Training "zusammenstellen" können, indem man verschiedene Techniken auswählt und mit einem Knopfdruck einen "Report" bekommt, welcher einem vorschlägt welche Einwärmübungen man machen sollte.
 
 
 ## Project confirmation
