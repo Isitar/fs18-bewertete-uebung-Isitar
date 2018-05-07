@@ -19,7 +19,11 @@ Danach sollte man sein Training "zusammenstellen" können, indem man verschieden
 
 ## Project confirmation
 
-< to be filled by lecturer>
+confirmed
+
+Super Idee!
+Have fun,
+D.König
 
 
 ## Project delivery <to be filled by student>
