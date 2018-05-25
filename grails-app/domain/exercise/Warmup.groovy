@@ -10,4 +10,8 @@ class Warmup {
     static constraints = {
         ytLink url: true
     }
+    @Override
+    String toString() {
+        return this.name;
+    }
 }

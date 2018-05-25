@@ -13,10 +13,14 @@ class Technique {
     String ytLink;
     static hasMany = [techniqueTags:TechniqueTag]
 
-
     static constraints = {
         id unique: true
         techniqueType ordinal: true
         ytLink url: true
+    }
+
+    @Override
+    String toString() {
+        return this.name;
     }
 }
