@@ -1,6 +1,7 @@
 package exercise
 
 class Technique {
+    static label = "Technik"
     enum TechniqueType {
         NageWaza,
         KatameWaza,
@@ -15,6 +16,7 @@ class Technique {
 
     static constraints = {
         id unique: true
+        name()
         techniqueType ordinal: true
         ytLink url: true
     }

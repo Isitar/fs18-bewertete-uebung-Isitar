@@ -6,7 +6,7 @@ class Tag {
     static hasMany = [techniqueTags: TechniqueTag, warmupTags: WarmupTag]
 
     static constraints = {
-        name unique: true
+        name unique: true, nullable: false
     }
 
     @Override

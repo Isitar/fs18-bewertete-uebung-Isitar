@@ -19,3 +19,11 @@ if (typeof jQuery !== 'undefined') {
         });
     })(jQuery);
 }
+
+
+// sorry for this ugly hack :)
+$(document).ready(function () {
+    $('.home').each(function () {
+        $(this).attr('href', '/masterData');
+    })
+});
