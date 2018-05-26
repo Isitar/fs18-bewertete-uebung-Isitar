@@ -2,6 +2,8 @@ package exercise
 
 class TrainingController {
 
+    static allowedMethods = [warmups: "POST"]
+
     def index() {
 
         def  techniques  = Technique.findAll();
@@ -9,6 +11,7 @@ class TrainingController {
     }
 
     def warmups() {
-
+        def techniqueIds = request.JSON
+        render(techniqueIds);
     }
 }

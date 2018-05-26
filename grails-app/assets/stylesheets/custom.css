@@ -9,6 +9,7 @@
     height: 100%;
     text-align: center;
 }
+
 .title-image-box {
     flex: 1 100%;
 }
@@ -16,10 +17,12 @@
 .title-image {
     object-fit: contain;
 }
+
 .landing-page-text {
     flex: 1 100%;
     color: #fff;
 }
+
 .landing-page-text > h1 {
     font-size: 50px;
 }
@@ -27,6 +30,34 @@
 .landing-page-text > p {
     font-size: 30px;
 }
+
 .landing-page-buttons {
     flex: 1 100%;
+}
+
+body.master-data {
+    background-color: black;
+}
+
+.selected-techniques {
+    background-color: darkgray;
+    min-height: 300px;
+}
+
+.unselected-techniques {
+    overflow: scroll;
+    background-color: darkgray;
+    min-height: 300px;
+}
+
+body.training {
+    background-color: black;
+
+}
+
+body.training > footer {
+    display: none;
+}
+body.training  h2 {
+    color: white;
 }

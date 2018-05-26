@@ -8,12 +8,14 @@
      border-color: #ff1212;
  }
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle,
 .btn-primary:active {
     background-color: #aa1212;
     border-color: #ff1212;
 }
 
-.btn-primary:focus {
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus,
+.btn-primary.focus, .btn-primary:focus {
     background-color: #f21212;
     border-color: #ff1212;
     box-shadow: 0 0 0 .2rem rgba(255,0,0,.5);

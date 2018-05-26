@@ -7,44 +7,47 @@
         <g:layoutTitle default="Judo Trainingshelfer"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="JudoMan.ico" type="image/x-ico" />
+    <asset:link rel="icon" href="JudoMan.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
 </head>
-<body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-		    <asset:image src="JudoMan.png" alt="Judo Man"/>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
+<body class="${pageProperty(name: 'body.class')}">
+<header class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            %{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">--}%
+            %{--<span class="sr-only">Toggle navigation</span>--}%
+            %{--<span class="icon-bar"></span>--}%
+            %{--<span class="icon-bar"></span>--}%
+            %{--<span class="icon-bar"></span>--}%
+            %{--</button>--}%
+            <a class="navbar-brand" href="/#">
+                <asset:image src="JudoMan.png" alt="Judo Man" style="max-width: 50px"/>
+                Trainingshelfer
+            </a>
         </div>
+        %{--<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">--}%
+        %{--<ul class="nav navbar-nav navbar-right">--}%
+        %{--<g:pageProperty name="page.nav" />--}%
+        %{--</ul>--}%
+        %{--</div>--}%
     </div>
+</header>
 
-    <g:layoutBody/>
+<g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+<footer class="footer" role="contentinfo">
+    Made by Pascal Lüscher
+</footer>
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
+<div id="spinner" class="spinner" style="display:none;">
+    <g:message code="spinner.alt" default="Loading&hellip;"/>
+</div>
 
-    <asset:javascript src="application.js"/>
+<asset:javascript src="application.js"/>
 
 </body>
 </html>
