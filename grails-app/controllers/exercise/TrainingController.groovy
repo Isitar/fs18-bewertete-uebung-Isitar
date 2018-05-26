@@ -23,16 +23,10 @@ class TrainingController {
         // find warmups for posted techniques
         def warmups = techniques
                 .stream()
-                .map({t -> t.techniqueTags})
-                .collect(Collectors.toList())
-                .flatten()
-                .stream()
+                .flatMap({t->t.techniqueTags.stream()})
                 .map({techniqueTag -> techniqueTag.tag})
                 .distinct()
-                .map({tag -> tag.warmupTags})
-                .collect(Collectors.toList())
-                .flatten()
-                .stream()
+                .flatMap({tag->tag.warmupTags.stream()})
                 .map({warmupTag -> warmupTag.warmup})
                 .distinct()
                 .collect(Collectors.toList());
