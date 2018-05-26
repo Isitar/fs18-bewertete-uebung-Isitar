@@ -13,6 +13,7 @@ class BootStrap {
         def drehenTag = new Tag(name: "Drehen").save(failOnError: true);
         def hebenTag = new Tag(name: "Heben").save(failOnError: true);
         def dehnenTag = new Tag(name: "Dehnen").save(failOnError: true);
+        def fallenTag = new Tag(name: "Fallen").save(failOnError: true);
 
         // Adding Group1 go-kyo techniques
         def deashibarai = new Technique(name: "De-ashi-barai", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "https://www.youtube.com/watch?v=I25HN3DE8hs").save(failOnError: true);
@@ -54,7 +55,7 @@ class BootStrap {
         def halbeDrehung = new Warmup(name: "Halbe drehung", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
         def baerenringen = new Warmup(name: "Bärenringen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
         def dehnen = new Warmup(name: "Dehnen XY", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
-
+        def maeukemi = new Warmup(name: "Mae ukemi", description: "Vorwärts rolle", ytLink: "https://www.youtube.com/watch?v=HDu1zyviDis").save(failOnError: true);
 
         new WarmupTag(warmup: liegestuetze, tag: armeTag).save(failOnError: true);
         new WarmupTag(warmup: kniebeugen, tag: beineTag).save(failOnError: true);
@@ -64,6 +65,7 @@ class BootStrap {
         new WarmupTag(warmup: halbeDrehung, tag: drehenTag).save(failOnError: true);
         new WarmupTag(warmup: baerenringen, tag: hebenTag).save(failOnError: true);
         new WarmupTag(warmup: dehnen, tag: dehnenTag).save(failOnError: true);
+        new WarmupTag(warmup: maeukemi, tag: fallenTag).save(failOnError: true);
 
         // gokyo group 2
         def kosotogari = new Technique(name: "Kosoto-gari", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=FtLazfLYL6k").save(failOnError: true);
@@ -88,33 +90,66 @@ class BootStrap {
         new TechniqueTag(technique: uchimata, tag: huefteTag).save(failOnError: true);
 
         // grp 3
-        new Technique(name: "Kosoto-gake", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=QpE9TREP9ys").save(failOnError: true);
-        new Technique(name: "Tsuri-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=lV_HUZ9m1fQ").save(failOnError: true);
-        new Technique(name: "Yoko-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=PELgzOt-Dus").save(failOnError: true);
-        new Technique(name: "Ashi-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=0cCsllLrClY").save(failOnError: true);
-        new Technique(name: "Hane-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=TTLgAT_uEis").save(failOnError: true);
-        new Technique(name: "Harai-tsurikomi-ashi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=vjwerq6UZIs").save(failOnError: true);
-        new Technique(name: "Tomoe-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=tOIbQ2cXRHU").save(failOnError: true);
-        new Technique(name: "Kata-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=yD09HBiPgEU").save(failOnError: true);
-        // grp 4
-        new Technique(name: "Sumi-gaeshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=-xQm8PV155s").save(failOnError: true);
-        new Technique(name: "Tani-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Rfi6zRDQQRI").save(failOnError: true);
-        new Technique(name: "Hane-makikomi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Jtkr4lcGcbA").save(failOnError: true);
-        new Technique(name: "Sukui-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=LfBesVQaHXU").save(failOnError: true);
-        new Technique(name: "Utsuri-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=39aWDO7e0vM").save(failOnError: true);
-        new Technique(name: "O-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=jNf08NFlaUg").save(failOnError: true);
-        new Technique(name: "Soto-makikomi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=GE8ITtd-b8Q").save(failOnError: true);
-        new Technique(name: "Uki-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=X2Y1E0xjE3Y").save(failOnError: true); 3
-        // grp 5
-        new Technique(name: "Osoto-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=SnG36ufXnk0").save(failOnError: true);
-        new Technique(name: "Uki-waza", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Ue04ZUBSXoM").save(failOnError: true);
-        new Technique(name: "Yoko-wakare", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=hqM5LL5YkNA").save(failOnError: true);
-        new Technique(name: "Yoko-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=eLcaT8HATRA").save(failOnError: true);
-        new Technique(name: "Ushiro-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=r31DHx-o7nc").save(failOnError: true);
-        new Technique(name: "Ura-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=6Ag8Gl76BQs").save(failOnError: true);
-        new Technique(name: "Sumi-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=uTYru2xGYcM").save(failOnError: true);
-        new Technique(name: "Yoko-gake", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=ZjIL-u46po4").save(failOnError: true);
+        def kosotogake = new Technique(name: "Kosoto-gake", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=QpE9TREP9ys").save(failOnError: true);
+        def tsurigoshi = new Technique(name: "Tsuri-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=lV_HUZ9m1fQ").save(failOnError: true);
+        def yokootoshi = new Technique(name: "Yoko-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=PELgzOt-Dus").save(failOnError: true);
+        def ashiguruma = new Technique(name: "Ashi-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=0cCsllLrClY").save(failOnError: true);
+        def hanegoshi = new Technique(name: "Hane-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=TTLgAT_uEis").save(failOnError: true);
+        def haraitsurikomiashi = new Technique(name: "Harai-tsurikomi-ashi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=vjwerq6UZIs").save(failOnError: true);
+        def tomoenage = new Technique(name: "Tomoe-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=tOIbQ2cXRHU").save(failOnError: true);
+        def kataguruma = new Technique(name: "Kata-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=yD09HBiPgEU").save(failOnError: true);
 
+        new TechniqueTag(technique: kosotogake, tag: beineTag).save(failOnError: true);
+        new TechniqueTag(technique: tsurigoshi, tag: huefteTag).save(failOnError: true);
+        new TechniqueTag(technique: yokootoshi, tag: armeTag).save(failOnError: true);
+        new TechniqueTag(technique: ashiguruma, tag: beineTag).save(failOnError: true);
+        new TechniqueTag(technique: hanegoshi, tag: huefteTag).save(failOnError: true);
+        new TechniqueTag(technique: haraitsurikomiashi, tag: beineTag).save(failOnError: true);
+        new TechniqueTag(technique: tomoenage, tag: beineTag).save(failOnError: true);
+        new TechniqueTag(technique: kataguruma, tag: hebenTag).save(failOnError: true);
+        new TechniqueTag(technique: kataguruma, tag: armeTag).save(failOnError: true);
+        new TechniqueTag(technique: kataguruma, tag: bauchTag).save(failOnError: true);
+
+
+
+        // grp 4
+        def sumigaeshi = new Technique(name: "Sumi-gaeshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=-xQm8PV155s").save(failOnError: true);
+        def taniotoshi = new Technique(name: "Tani-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Rfi6zRDQQRI").save(failOnError: true);
+        def hanemakikomi = new Technique(name: "Hane-makikomi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Jtkr4lcGcbA").save(failOnError: true);
+        def sukuinage = new Technique(name: "Sukui-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=LfBesVQaHXU").save(failOnError: true);
+        def utsurigoshi = new Technique(name: "Utsuri-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=39aWDO7e0vM").save(failOnError: true);
+        def oguruma = new Technique(name: "O-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=jNf08NFlaUg").save(failOnError: true);
+        def sotomakikomi = new Technique(name: "Soto-makikomi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=GE8ITtd-b8Q").save(failOnError: true);
+        def ukiotoshi = new Technique(name: "Uki-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=X2Y1E0xjE3Y").save(failOnError: true); 3
+
+        new TechniqueTag(technique: sumigaeshi, tag: fallenTag).save(failOnError: true);
+        new TechniqueTag(technique: taniotoshi, tag: drehenTag).save(failOnError: true);
+        new TechniqueTag(technique: hanemakikomi, tag: huefteTag).save(failOnError: true);
+        new TechniqueTag(technique: sukuinage, tag: drehenTag).save(failOnError: true);
+        new TechniqueTag(technique: utsurigoshi, tag: hebenTag).save(failOnError: true);
+        new TechniqueTag(technique: oguruma, tag: huefteTag).save(failOnError: true);
+        new TechniqueTag(technique: sotomakikomi, tag: drehenTag).save(failOnError: true);
+        new TechniqueTag(technique: sotomakikomi, tag: bauchTag).save(failOnError: true);
+        new TechniqueTag(technique: ukiotoshi, tag: huefteTag).save(failOnError: true);
+
+        // grp 5
+        def osotoguruma = new Technique(name: "Osoto-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=SnG36ufXnk0").save(failOnError: true);
+        def ukiwaza = new Technique(name: "Uki-waza", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=Ue04ZUBSXoM").save(failOnError: true);
+        def yokowakare = new Technique(name: "Yoko-wakare", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=hqM5LL5YkNA").save(failOnError: true);
+        def yokoguruma = new Technique(name: "Yoko-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=eLcaT8HATRA").save(failOnError: true);
+        def ushirogoshi = new Technique(name: "Ushiro-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=r31DHx-o7nc").save(failOnError: true);
+        def uranage = new Technique(name: "Ura-nage", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=6Ag8Gl76BQs").save(failOnError: true);
+        def sumiotoshi = new Technique(name: "Sumi-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=uTYru2xGYcM").save(failOnError: true);
+        def yokogake = new Technique(name: "Yoko-gake", techniqueType: Technique.TechniqueType.NageWaza, ytLink: "http://www.youtube.com/watch?v=ZjIL-u46po4").save(failOnError: true);
+
+        new TechniqueTag(technique: osotoguruma, tag: beineTag).save(failOnError: true);
+        new TechniqueTag(technique: ukiwaza, tag: fallenTag).save(failOnError: true);
+        new TechniqueTag(technique: yokowakare, tag: fallenTag).save(failOnError: true);
+        new TechniqueTag(technique: yokoguruma, tag: fallenTag).save(failOnError: true);
+        new TechniqueTag(technique: ushirogoshi, tag: huefteTag).save(failOnError: true);
+        new TechniqueTag(technique: uranage, tag: hebenTag).save(failOnError: true);
+        new TechniqueTag(technique: sumiotoshi, tag: fallenTag).save(failOnError: true);
+        new TechniqueTag(technique: yokogake, tag: beineTag).save(failOnError: true);
 
     }
     def destroy = {
