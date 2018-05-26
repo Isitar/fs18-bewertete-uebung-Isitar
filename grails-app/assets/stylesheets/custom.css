@@ -58,7 +58,7 @@ body.training > footer {
 }
 
 
-body.warmups,
+body.warmups h2,
 body.training  h2 {
     color: white;
 }

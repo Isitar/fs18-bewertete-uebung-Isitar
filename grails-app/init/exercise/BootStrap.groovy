@@ -50,7 +50,7 @@ class BootStrap {
 
         // adding some basic warumps 1 per tag
         def liegestuetze = new Warmup(name: "Liegestütze", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
-        def kniebeugen = new Warmup(name: "Kniebeugen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
+        def kniebeugen = new Warmup(name: "Kniebeugen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr", ytLink: 'https://www.youtube.com/watch?v=aclHkVaku9U').save(failOnError: true);
         def hueftekreisen = new Warmup(name: "Hüfte kreisen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
         def rumpfbeugen = new Warmup(name: "Rumpfbeugen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
         def verkehrterumpfbeugen = new Warmup(name: "Verkehrte Rumpfbeugen", description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr").save(failOnError: true);
