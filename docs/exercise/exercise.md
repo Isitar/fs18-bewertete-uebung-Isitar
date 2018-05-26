@@ -35,11 +35,11 @@ How to test the project:  (if other than `grailsw test-app`)
 Hand-written, static HTML 
 project description:      (if other than `index.html` in project root directory)
 
-External contributions: 
+External contributions: Bootstrap & JQuery 
 
 Other comments: 
 
-I'm particular proud of: Benutzen von Flexbox auf der Startseite, TrainingController Query für Warmups
+I'm particular proud of: Benutzen von Flexbox auf der Startseite, TrainingController Query für Warmups, Drag & Drop auf Trainings-Seite
 
 ## Project grading 
 

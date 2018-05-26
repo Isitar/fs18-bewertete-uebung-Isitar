@@ -8,7 +8,7 @@ class TrainingController {
 
     def index() {
 
-        def  techniques  = Technique.findAll();
+        def  techniques  = Technique.findAll([sort: "name"]);
         return [techniques: techniques]
     }
 

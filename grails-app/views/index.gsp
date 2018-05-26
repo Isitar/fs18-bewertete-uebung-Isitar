@@ -21,7 +21,7 @@
 
     <div class="landing-page-text">
         <h1>Willkommen</h1>
-        <p>Im Judo-Trainingshelfer</p>
+        <p>Beim Judo-Trainingshelfer</p>
     </div>
 
     <div class="landing-page-buttons">
