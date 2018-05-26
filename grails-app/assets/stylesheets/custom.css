@@ -35,6 +35,9 @@
     flex: 1 100%;
 }
 
+
+body.warmups,
+body.training,
 body.master-data {
     background-color: black;
 }
@@ -50,14 +53,17 @@ body.master-data {
     min-height: 300px;
 }
 
-body.training {
-    background-color: black;
-
-}
-
 body.training > footer {
     display: none;
 }
+
+
+body.warmups,
 body.training  h2 {
     color: white;
 }
+
+.fa-youtube {
+    color: red;
+}
+

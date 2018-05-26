@@ -14,14 +14,19 @@
         <ul class="list-group unselected-techniques" ondrop="dropUnselected(event)" ondragover="allowDrop(event)">
             <g:each in="${techniques}" var="technique">
                 <li class="technique list-group-item" data-technique-id="${technique.id}" ondragstart="dragLi(event)"
-                    draggable="true" id="${technique.id}">${technique.name}</li>
+                    draggable="true" id="${technique.id}">${technique.name}
+                    <g:if test="${technique.ytLink != null && !technique.ytLink.equals('')}" >
+                        <a href="${technique.ytLink}"> <i class="fab fa-youtube"></i></a>
+                    </g:if>
+                </li>
             </g:each>
         </ul>
     </div>
 
     <div class="col-md-6 col-sm-12">
         <h2>Ausgewählte Techniken</h2>
-        <ul class="list-group selected-techniques" ondrop="dropSelected(event)" ondragover="allowDrop(event)">
+        <ul class="list-group selected-techniques" id="ul-selected-techniques" ondrop="dropSelected(event)"
+            ondragover="allowDrop(event)">
 
         </ul>
     </div>
@@ -29,7 +34,7 @@
 
 <div class="row">
     <div class="col-12 pt-2">
-        <button class="btn-block btn-primary">Zusammenstellen</button>
+        <button class="btn-block btn-primary" id="btn-create-warmup" onclick="createWarmup()">Zusammenstellen</button>
     </div>
 </div>
 
@@ -61,6 +66,34 @@
             var data = event.dataTransfer.getData("item");
             event.target.appendChild(document.getElementById(data));
         }
+    }
+
+    function createWarmup() {
+        var ids = [];
+        var ul = document.getElementById('ul-selected-techniques');
+        for (var child in ul.children) {
+            try {
+                ids.push(ul.children[child].attributes['data-technique-id'].value);
+            } catch (e) {
+                // child has no attribute or no data-technique-id
+            }
+        }
+
+
+        $.ajax({
+            type: 'POST',
+            url: 'training/warmups',
+            data: JSON.stringify(ids),
+            contentType: "application/json; charset=utf-8",
+            success: function(resp) {
+                document.open();
+                document.write(resp);
+                document.close();
+            },
+            failure: function(errMsg) {
+                alert(errMsg);
+            }
+        });
     }
 
 </script>
