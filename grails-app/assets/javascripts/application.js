@@ -21,9 +21,29 @@ if (typeof jQuery !== 'undefined') {
 }
 
 
-// sorry for this ugly hack :)
+
 $(document).ready(function () {
+    // sorry for this ugly hack, but easier than generating all this boilerplate code :)
     $('.home').each(function () {
         $(this).attr('href', '/masterData');
-    })
+    });
+
+    // fancy icons for collapses
+    var collapses = $('.collapse');
+
+    collapses.on('shown.bs.collapse', function () {
+        var headerElem = $('#' + ($(this).attr('aria-labelledby')));
+        var icon = headerElem.find('i');
+        icon.removeClass('fa-angle-down');
+        icon.addClass('fa-angle-up')
+    });
+
+    collapses.on('hidden.bs.collapse', function () {
+        var headerElem = $('#' + ($(this).attr('aria-labelledby')));
+        var icon = headerElem.find('i');
+        icon.removeClass('fa-angle-up');
+        icon.addClass('fa-angle-down')
+    });
+
+
 });

@@ -35,12 +35,16 @@
     flex: 1 100%;
 }
 
+.landing-page-buttons > a {
+    width: 250px;
+}
 
 body.warmups,
 body.training,
 body.master-data {
     background-color: black;
 }
+
 .unselected-techniques,
 .selected-techniques {
     background-color: darkgray;
@@ -55,9 +59,8 @@ body.training > footer {
     display: none;
 }
 
-
 body.warmups h2,
-body.training  h2 {
+body.training h2 {
     color: white;
 }
 

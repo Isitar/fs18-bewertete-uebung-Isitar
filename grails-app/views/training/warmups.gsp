@@ -59,15 +59,24 @@
                  aria-controls="collapse-warmup-${warmup.id}"
                  role="listitem">
                 ${warmup.name}
+
+                <i class="fas fa-angle-down float-right"></i>
             </div>
 
             <div id="collapse-warmup-${warmup.id}" class="collapse" aria-labelledby="head-warmup-${warmup.id}"
                  data-parent="#accordion-warmups">
                 <div class="card-body">
-                    ${warmup.description}
-                    <g:if test="${warmup.ytLink != null && !warmup.ytLink.equals('')}">
-                        <a href="${warmup.ytLink}"><i class="fab fa-youtube"></i></a>
-                    </g:if>
+                    <dl class="row">
+                        <dt class="col-sm-3">Beschreibung</dt>
+                        <dd class="col-sm-9">${warmup.description}</dd>
+
+                        <g:if test="${warmup.ytLink != null && !warmup.ytLink.equals('')}">
+                            <dt class="col-sm-3">Youtube</dt>
+                            <dd class="col-sm-9">
+                                <a href="${warmup.ytLink}">${warmup.ytLink}<i class="fab fa-youtube"></i></a>
+                            </dd>
+                        </g:if>
+                    </dl>
                 </div>
             </div>
         </div>
