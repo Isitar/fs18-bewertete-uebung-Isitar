@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -16,25 +16,14 @@
 </head>
 
 <body class="${pageProperty(name: 'body.class')}">
-<header class="navbar navbar-default navbar-static-top" role="navigation">
+<header class="navbar navbar-default navbar-static-top" >
     <div class="container">
         <div class="navbar-header">
-            %{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">--}%
-            %{--<span class="sr-only">Toggle navigation</span>--}%
-            %{--<span class="icon-bar"></span>--}%
-            %{--<span class="icon-bar"></span>--}%
-            %{--<span class="icon-bar"></span>--}%
-            %{--</button>--}%
             <a class="navbar-brand" href="/#">
                 <asset:image src="JudoMan.png" alt="Judo Man" style="max-width: 50px"/>
                 Trainingshelfer
             </a>
         </div>
-        %{--<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">--}%
-        %{--<ul class="nav navbar-nav navbar-right">--}%
-        %{--<g:pageProperty name="page.nav" />--}%
-        %{--</ul>--}%
-        %{--</div>--}%
     </div>
 </header>
 

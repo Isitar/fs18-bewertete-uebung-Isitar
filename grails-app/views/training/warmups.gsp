@@ -10,15 +10,18 @@
 
 <a href="training" class="btn btn-primary mt-1">Zurück</a>
 
-
 <h2>Ausgewählte Techniken</h2>
 
-<div id="accordion-techniques">
+<div id="accordion-techniques" role="list">
     <g:each in="${techniques}" var="technique">
         <div class="card">
-            <div class="card-header" id="head-technique-${technique.id}" data-toggle="collapse"
+            <div class="card-header"
+                 id="head-technique-${technique.id}"
+                 data-toggle="collapse"
                  data-target="#collapse-technique-${technique.id}"
-                 aria-expanded="false" aria-controls="collapse-technique-${technique.id}">
+                 aria-expanded="false"
+                 aria-controls="collapse-technique-${technique.id}"
+                 role="listitem">
                 ${technique.name}
                 <i class="fas fa-angle-down float-right"></i>
             </div>
@@ -45,12 +48,16 @@
 
 <h2>Aufwärm Übungen</h2>
 
-<div id="accordion-warmups">
+<div id="accordion-warmups" role="list">
     <g:each in="${warmups}" var="warmup">
         <div class="card">
-            <div class="card-header" id="head-warmup-${warmup.id}" data-toggle="collapse"
+            <div class="card-header"
+                 id="head-warmup-${warmup.id}"
+                 data-toggle="collapse"
                  data-target="#collapse-warmup-${warmup.id}"
-                 aria-expanded="false" aria-controls="collapse-warmup-${warmup.id}">
+                 aria-expanded="false"
+                 aria-controls="collapse-warmup-${warmup.id}"
+                 role="listitem">
                 ${warmup.name}
             </div>
 
@@ -73,5 +80,4 @@
         </g:if>
     </li>
 </g:each>
-</ul>
 </body>
