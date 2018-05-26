@@ -1,0 +1,32 @@
+
+.landing-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-wrap: wrap;
+    background: black;
+    height: 100%;
+    text-align: center;
+}
+.title-image-box {
+    flex: 1 100%;
+}
+
+.title-image {
+    object-fit: contain;
+}
+.landing-page-text {
+    flex: 1 100%;
+    color: #fff;
+}
+.landing-page-text > h1 {
+    font-size: 50px;
+}
+
+.landing-page-text > p {
+    font-size: 30px;
+}
+.landing-page-buttons {
+    flex: 1 100%;
+}

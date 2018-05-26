@@ -1,0 +1,20 @@
+.btn-primary {
+    background-color: #d21212;
+    border-color: #f21212;
+}
+
+.btn-primary:hover {
+     background-color: #f21212;
+     border-color: #ff1212;
+ }
+
+.btn-primary:active {
+    background-color: #aa1212;
+    border-color: #ff1212;
+}
+
+.btn-primary:focus {
+    background-color: #f21212;
+    border-color: #ff1212;
+    box-shadow: 0 0 0 .2rem rgba(255,0,0,.5);
+}
