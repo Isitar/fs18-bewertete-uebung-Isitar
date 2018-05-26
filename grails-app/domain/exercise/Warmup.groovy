@@ -8,7 +8,7 @@ class Warmup {
     static hasMany = [warmupTags:WarmupTag]
 
     static constraints = {
-        ytLink url: true
+        ytLink url: true, nullable: true
     }
     @Override
     String toString() {

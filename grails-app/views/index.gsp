@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    %{--<meta name="layout" content="main"/>--}%
+
     <title>Judo Trainingshelfer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -25,8 +25,8 @@
     </div>
 
     <div class="landing-page-buttons">
-        <a href="#" class="btn btn-primary btn-lg">Training zusammenstellen</a>
-        <a href="#" class="btn btn-primary btn-lg">Stammdaten verwalten</a>
+        <a href="training" class="btn btn-primary btn-lg">Training zusammenstellen</a>
+        <a href="masterData" class="btn btn-primary btn-lg">Stammdaten verwalten</a>
     </div>
 </div>
 
