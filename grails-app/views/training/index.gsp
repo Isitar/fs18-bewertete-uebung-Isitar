@@ -11,7 +11,8 @@
 <div class="row">
     <div class="col-md-6 col-sm-12">
         <h2>Verfügbare Techniken</h2>
-        <ul id="ul-unselected-techniques" class="list-group unselected-techniques" ondrop="dropUnselected(event)" ondragover="allowDrop(event)">
+        <ul id="ul-unselected-techniques" class="list-group unselected-techniques" ondrop="dropUnselected(event)"
+            ondragover="allowDrop(event)">
             <g:each in="${techniques}" var="technique">
                 <li class="technique list-group-item"
                     data-technique-id="${technique.id}"
@@ -19,8 +20,8 @@
                     draggable="true" id="${technique.id}"
                     onclick="clickLi(this)">
                     ${technique.name}
-                    <g:if test="${technique.ytLink != null && !technique.ytLink.equals('')}" >
-                        <a href="${technique.ytLink}"> <i class="fab fa-youtube"></i></a>
+                    <g:if test="${technique.ytLink != null && !technique.ytLink.equals('')}">
+                        <a href="${technique.ytLink}"><i class="fab fa-youtube"></i></a>
                     </g:if>
                 </li>
             </g:each>
@@ -38,7 +39,8 @@
 
 <div class="row">
     <div class="col-12 pt-2">
-        <button class="btn btn-block btn-primary btn-lg" id="btn-create-warmup" onclick="createWarmup()">Zusammenstellen</button>
+        <button class="btn btn-block btn-primary btn-lg" id="btn-create-warmup"
+                onclick="createWarmup()">Zusammenstellen</button>
     </div>
 </div>
 
@@ -105,12 +107,12 @@
             url: 'training/warmups',
             data: JSON.stringify(ids),
             contentType: "application/json; charset=utf-8",
-            success: function(resp) {
+            success: function (resp) {
                 document.open();
                 document.write(resp);
                 document.close();
             },
-            failure: function(errMsg) {
+            failure: function (errMsg) {
                 alert(errMsg);
             }
         });
