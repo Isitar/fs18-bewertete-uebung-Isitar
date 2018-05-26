@@ -68,6 +68,15 @@ class BootStrap {
         new WarmupTag(warmup: baerenringen, tag: hebenTag).save(failOnError: true);
         new WarmupTag(warmup: dehnen, tag: dehnenTag).save(failOnError: true);
 
+        // gokyo group 2
+        new Technique(name: "Kosoto-gari", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=FtLazfLYL6k").save(failOnError: true);
+        new Technique(name: "Kouchi-gari", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=j9DnkH-2tGg").save(failOnError: true);
+        new Technique(name: "Koshi-guruma", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=vharlgzgJlA").save(failOnError: true);
+        new Technique(name: "Tsurikomi-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=73bThxi0q0s").save(failOnError: true);
+        new Technique(name: "Okuri-ashi-harai", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=4ug0u9a_xyE").save(failOnError: true);
+        new Technique(name: "Tai-otoshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=bweEltFImMA").save(failOnError: true);
+        new Technique(name: "Harai-goshi", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=WbK9COV-GpY").save(failOnError: true);
+        new Technique(name: "Uchi-mata", techniqueType: Technique.TechniqueType.NageWaza, ytLink:"http://www.youtube.com/watch?v=QQjMkHGU_Ic").save(failOnError: true);
 
 
 
