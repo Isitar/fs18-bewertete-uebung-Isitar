@@ -41,16 +41,14 @@ body.training,
 body.master-data {
     background-color: black;
 }
-
+.unselected-techniques,
 .selected-techniques {
     background-color: darkgray;
     min-height: 300px;
-}
-
-.unselected-techniques {
+    max-height: 80vh;
     overflow: scroll;
-    background-color: darkgray;
-    min-height: 300px;
+    padding: 10px;
+    padding-bottom: 50px;
 }
 
 body.training > footer {

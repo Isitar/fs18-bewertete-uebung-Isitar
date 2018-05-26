@@ -25,8 +25,8 @@
     </div>
 
     <div class="landing-page-buttons">
-        <a href="training" class="btn btn-primary btn-lg">Training zusammenstellen</a>
-        <a href="masterData" class="btn btn-primary btn-lg">Stammdaten verwalten</a>
+        <a href="training" class="btn btn-primary btn-lg mb-1">Training zusammenstellen</a>
+        <a href="masterData" class="btn btn-primary btn-lg mb-1">Stammdaten verwalten</a>
     </div>
 </div>
 

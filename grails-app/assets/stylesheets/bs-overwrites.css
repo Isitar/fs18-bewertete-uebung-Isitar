@@ -20,3 +20,9 @@
     border-color: #ff1212;
     box-shadow: 0 0 0 .2rem rgba(255,0,0,.5);
 }
+
+.card-header {
+    background-color: #d21212;
+    color: white;
+    font-weight: bold;
+}

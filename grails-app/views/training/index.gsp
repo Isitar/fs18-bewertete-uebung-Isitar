@@ -11,10 +11,14 @@
 <div class="row">
     <div class="col-md-6 col-sm-12">
         <h2>Verfügbare Techniken</h2>
-        <ul class="list-group unselected-techniques" ondrop="dropUnselected(event)" ondragover="allowDrop(event)">
+        <ul id="ul-unselected-techniques" class="list-group unselected-techniques" ondrop="dropUnselected(event)" ondragover="allowDrop(event)">
             <g:each in="${techniques}" var="technique">
-                <li class="technique list-group-item" data-technique-id="${technique.id}" ondragstart="dragLi(event)"
-                    draggable="true" id="${technique.id}">${technique.name}
+                <li class="technique list-group-item"
+                    data-technique-id="${technique.id}"
+                    ondragstart="dragLi(event)"
+                    draggable="true" id="${technique.id}"
+                    onclick="clickLi(this)">
+                    ${technique.name}
                     <g:if test="${technique.ytLink != null && !technique.ytLink.equals('')}" >
                         <a href="${technique.ytLink}"> <i class="fab fa-youtube"></i></a>
                     </g:if>
@@ -34,7 +38,7 @@
 
 <div class="row">
     <div class="col-12 pt-2">
-        <button class="btn-block btn-primary" id="btn-create-warmup" onclick="createWarmup()">Zusammenstellen</button>
+        <button class="btn btn-block btn-primary btn-lg" id="btn-create-warmup" onclick="createWarmup()">Zusammenstellen</button>
     </div>
 </div>
 
@@ -48,6 +52,22 @@
     function dragLi(event) {
         if (event.target.localName === 'li') {
             event.dataTransfer.setData("item", event.target.id);
+        }
+    }
+
+    function clickLi(sender) {
+        if (sender.localName === 'li') {
+            var parentId = sender.parentElement.id;
+
+            if (parentId === 'ul-unselected-techniques') {
+                // select procedure
+                newParent = document.getElementById('ul-selected-techniques');
+                newParent.appendChild(sender);
+            } else if (parentId === 'ul-selected-techniques') {
+                // unselect procedure
+                newParent = document.getElementById('ul-unselected-techniques');
+                newParent.appendChild(sender);
+            }
         }
 
     }
