@@ -22,7 +22,7 @@ Danach sollte man sein Training "zusammenstellen" können, indem man verschieden
 confirmed
 
 Super Idee!
-Have fun,
+Have fun,, 
 D.König
 
 
@@ -43,4 +43,20 @@ I'm particular proud of: Benutzen von Flexbox auf der Startseite, TrainingContro
 
 ## Project grading 
 
-< to be filled by lecturer>
+Description html given and fully valid, nice use of semantic elements.
+
+The application works nicely.
+
+Functionality is CRUD over 5 domain classes with two many-to-many relations, specialized interactive, dynamic
+view/controller for the end user, tag matching, media inclusion.
+
+Git log has enough commits but it is pretty much all in one day.
+No tests.
+
+This is a very nice app with some interesting business logic that is implemented with the stream API.
+You make very good use of WebMVC and scaffolding where appropriate.
+I award and extra point for the technical challenge in the dynamic views, which goes beyond what we
+have covered in the module.
+Too bad that tests are missing.
+
+Grade: 5.8
